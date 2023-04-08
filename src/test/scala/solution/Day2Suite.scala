@@ -3,17 +3,16 @@ package solution
 import munit.FunSuite
 import solution.Day2._
 
-class Day2Test extends FunSuite {
-
-  private val testInput =
+class Day2Suite extends FunSuite with BaseTest {
+  override def input: String =
     """A Y
       |B X
-      |C Z""".stripMargin.split("\n").toList
+      |C Z""".stripMargin
 
 
   test("first part decode") {
     assertEquals(
-      Day2.decodeFirst(testInput),
+      Day2.decodeFirst(lines),
       List(
         Game.make(Paper, Rock),
         Game.make(Rock, Paper),
@@ -30,7 +29,7 @@ class Day2Test extends FunSuite {
 
   test("second part decode") {
     assertEquals(
-      Day2.decodeSecond(testInput),
+      Day2.decodeSecond(lines),
       List(
         Game.make(Draw, Rock),
         Game.make(Lose, Paper),

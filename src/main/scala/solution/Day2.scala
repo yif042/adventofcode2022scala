@@ -6,7 +6,6 @@ object Day2 extends Solution {
   override def solveFirstPart(): Int =
     decodeFirst(lines).map(_.point()).sum
 
-
   def decodeFirst(lines: List[String]): List[Game] = {
     val yourCode = Map(
       "A" -> Rock,

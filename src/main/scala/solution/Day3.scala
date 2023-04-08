@@ -12,7 +12,10 @@ object Day3 extends Solution {
   override def solveSecondPart(): Int =
     lines
       .grouped(3)
-      .map(ss => ThreeGroup.make(ss.head, ss(1), ss(2)))
+      .map { xs =>
+        val List(s1, s2, s3) = xs
+        ThreeGroup.make(s1, s2, s3)
+      }
       .map(tg => tg.badgeType())
       .map(t => t.priority())
       .sum

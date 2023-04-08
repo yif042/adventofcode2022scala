@@ -11,6 +11,7 @@ object GenerateTestFiles extends IOApp.Simple {
       s"""package solution
          |
          |import munit.FunSuite
+         |import Day$day._
          |
          |class Day${day}Suite extends FunSuite with BaseTest {
          |  override def input: String = ???

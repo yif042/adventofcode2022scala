@@ -1,7 +1,5 @@
 package solution
 
-import java.awt.dnd.DragSource
-
 object Day2 extends Solution {
   override val day: Int = 2
 

@@ -2,7 +2,7 @@ package solution
 
 import scala.io.Source
 
-trait Solution{
+trait Solution {
   type Answer
   val day: Int
 

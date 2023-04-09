@@ -23,7 +23,12 @@ class Day5Suite extends FunSuite with BaseTest {
       "CMZ"
     )
   }
-
+  test("second part answer") {
+    assertEquals(
+      solveSecondPart(lines),
+      "MCD"
+    )
+  }
   test("parse stacks correctly") {
     assertEquals(
       parseStacks(
@@ -35,8 +40,6 @@ class Day5Suite extends FunSuite with BaseTest {
         3 -> "P".toList.reverse,
       )),
     )
-
-
   }
   test("parse moves correctly") {
     assertEquals(

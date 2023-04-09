@@ -15,6 +15,21 @@ object GenerateTestFiles extends IOApp.Simple {
          |
          |class Day${day}Suite extends FunSuite with BaseTest {
          |  override def input: String = ???
+         |
+         |  test("first part answer") {
+         |    assertEquals(
+         |      solveFirstPart(lines),
+         |      ???
+         |    )
+         |  }
+         |
+         |  test("second part answer") {
+         |    assertEquals(
+         |      solveSecondPart(lines),
+         |      ???
+         |    )
+         |  }
+         |
          |}
          |""".stripMargin
     }
@@ -35,7 +50,7 @@ object GenerateTestFiles extends IOApp.Simple {
   }
 
   override def run: IO[Unit] =
-    Range.inclusive(1, 5)
+    Range.inclusive(1, 6)
       .map(generate)
       .toList
       .sequence_

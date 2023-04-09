@@ -11,12 +11,12 @@ object GenerateFiles extends IOApp.Simple {
     val content =
       s"""package solution
          |
-         |object Day$day extends Solution[Int] {
+         |object Day$day extends Solution {
          |  override val day: Int = $day
          |
-         |  override def solveFirstPart(lines: List[String]): Int = ???
+         |  override def solveFirstPart(lines: List[String]): Answer = ???
          |
-         |  override def solveSecondPart(lines: List[String]): Int = ???
+         |  override def solveSecondPart(lines: List[String]): Answer = ???
          |}
          |
          |""".stripMargin

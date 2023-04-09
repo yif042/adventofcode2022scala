@@ -2,17 +2,18 @@ package solution
 
 import scala.collection.immutable.TreeMap
 
-object Day5 extends Solution[String] {
+object Day5 extends Solution {
   override val day: Int = 5
+  override type Answer = String
 
-  override def solveFirstPart(lines: List[String]): String = {
+  override def solveFirstPart(lines: List[String]): Answer = {
     val (stacks, moves) = parse(lines)
     moves.foreach(stacks.processSingle)
     stacks.headString()
   }
 
 
-  override def solveSecondPart(lines: List[String]): String = {
+  override def solveSecondPart(lines: List[String]): Answer = {
     val (stacks, moves) = parse(lines)
     moves.foreach(stacks.processBatch)
     stacks.headString()

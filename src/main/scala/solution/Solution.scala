@@ -2,15 +2,16 @@ package solution
 
 import scala.io.Source
 
-trait Solution[T] {
+trait Solution{
+  type Answer
   val day: Int
 
   // lazy until concrete class
   lazy val lines: List[String] = parseFile(day)
 
-  def solveFirstPart(lines: List[String]): T
+  def solveFirstPart(lines: List[String]): Answer
 
-  def solveSecondPart(lines: List[String]): T
+  def solveSecondPart(lines: List[String]): Answer
 
   def run(): Unit = main(Array())
 

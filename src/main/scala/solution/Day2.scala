@@ -1,9 +1,10 @@
 package solution
 
-object Day2 extends Solution[Int] {
+object Day2 extends Solution {
+  override type Answer = Int
   override val day: Int = 2
 
-  override def solveFirstPart(lines: List[String]): Int =
+  override def solveFirstPart(lines: List[String]): Answer =
     decodeFirst(lines).map(_.point()).sum
 
   def decodeFirst(lines: List[String]): List[Game] = {
@@ -27,7 +28,7 @@ object Day2 extends Solution[Int] {
     }
   }
 
-  override def solveSecondPart(lines: List[String]): Int =
+  override def solveSecondPart(lines: List[String]): Answer =
     decodeSecond(lines).map(_.point()).sum
 
   def decodeSecond(lines: List[String]): List[Game] = {

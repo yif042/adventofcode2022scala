@@ -1,15 +1,16 @@
 package solution
 
-object Day3 extends Solution[Int] {
+object Day3 extends Solution {
   override val day: Int = 3
+  override type Answer = Int
 
-  override def solveFirstPart(lines: List[String]): Int =
+  override def solveFirstPart(lines: List[String]): Answer =
     lines
       .map(s => Rucksack(s).compartmentType())
       .map(t => t.priority())
       .sum
 
-  override def solveSecondPart(lines: List[String]): Int =
+  override def solveSecondPart(lines: List[String]): Answer =
     lines
       .grouped(3)
       .map { xs =>

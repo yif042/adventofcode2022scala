@@ -1,10 +1,10 @@
 package solution
 
-object Day24 extends Solution {
+object Day24 extends Solution[Int] {
   override val day: Int = 24
 
-  override def solveFirstPart(): Int = ???
+  override def solveFirstPart(lines: List[String]): Int = ???
 
-  override def solveSecondPart(): Int = ???
+  override def solveSecondPart(lines: List[String]): Int = ???
 }
 

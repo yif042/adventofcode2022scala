@@ -1,12 +1,12 @@
 package solution
 
-object Day4 extends Solution {
+object Day4 extends Solution[Int] {
   override val day: Int = 4
 
-  override def solveFirstPart(): Int =
+  override def solveFirstPart(lines: List[String]): Int =
     parse(lines).count(_.containsAnother())
 
-  override def solveSecondPart(): Int =
+  override def solveSecondPart(lines: List[String]): Int =
     parse(lines).count(_.overlaps())
 
   def parse(lines: List[String]): List[Assignment] =

@@ -2,24 +2,24 @@ package solution
 
 import scala.io.Source
 
-trait Solution {
+trait Solution[T] {
   val day: Int
 
   // lazy until concrete class
   lazy val lines: List[String] = parseFile(day)
 
-  def solveFirstPart(): Int
+  def solveFirstPart(lines: List[String]): T
 
-  def solveSecondPart(): Int
+  def solveSecondPart(lines: List[String]): T
 
   def run(): Unit = main(Array())
 
   def main(args: Array[String]): Unit = {
     println(s"solution for day $day")
 
-    val res1 = solveFirstPart()
+    val res1 = solveFirstPart(lines)
     println(s"1st part: $res1")
-    val res2 = solveSecondPart()
+    val res2 = solveSecondPart(lines)
     println(s"2st part: $res2")
 
     println(Array.fill(20)("-").mkString)

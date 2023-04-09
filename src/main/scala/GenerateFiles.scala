@@ -1,7 +1,7 @@
 import cats.effect.{IO, IOApp}
+import cats.implicits._
 import fs2.io.file.{Files, Path}
 import fs2.text
-import cats.implicits._
 
 
 // generate day[1-25].scala with template
@@ -11,12 +11,12 @@ object GenerateFiles extends IOApp.Simple {
     val content =
       s"""package solution
          |
-         |object Day$day extends Solution {
+         |object Day$day extends Solution[Int] {
          |  override val day: Int = $day
          |
-         |  override def solveFirstPart(): Int = ???
+         |  override def solveFirstPart(lines: List[String]): Int = ???
          |
-         |  override def solveSecondPart(): Int = ???
+         |  override def solveSecondPart(lines: List[String]): Int = ???
          |}
          |
          |""".stripMargin

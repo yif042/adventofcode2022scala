@@ -50,7 +50,7 @@ object GenerateTestFiles extends IOApp.Simple {
   }
 
   override def run: IO[Unit] =
-    Range.inclusive(1, 6)
+    Range.inclusive(1, 25)
       .map(generate)
       .toList
       .sequence_
